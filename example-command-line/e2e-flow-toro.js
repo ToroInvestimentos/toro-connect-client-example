@@ -2,6 +2,11 @@ const readline = require("readline");
 const { Issuer, generators, custom } = require("openid-client");
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0; // Necessary for localhost test
 const credentials = {
+  client_id: "", // Insira o identificador de parceiro
+  client_secret: "", // Insira o segredo de parceiro
+  redirect_uris: [], // Insira a URL de callback
+  scope: "openid profile email accounts", // Com exceção do openid, os outros escopos são opcionais
+};
 
 const issuerUrl = "https://conta.toroinvestimentos.com.br";
 
